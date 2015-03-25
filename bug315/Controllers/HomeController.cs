@@ -11,7 +11,9 @@ namespace bug315.Controllers
     {
         public ActionResult Index()
         {
-            
+            //create the VM for index
+            WorkItemIndexVm vModel = new WorkItemIndexVm();
+            //Create a list of objects (Bug, TaskToDo)
             List<WorkItem> mList = new List<WorkItem>() { 
                 new Bug(){Title="audio not working", Priority=1, DateCreated=DateTime.Now, StepsToReproduce="click the sound icon"},
                 new Bug(){Title="The dropdown is empty", Priority=3, DateCreated=DateTime.Now, StepsToReproduce="choose state, then city"},
@@ -19,7 +21,12 @@ namespace bug315.Controllers
                 new TaskToDo(){Title="Purchase strong coffee", Priority=1, DateCreated=DateTime.Now.AddHours(-5), Description="Colombian Blend"},
             };
 
-            return View();
+            //populate the VM (welcomeMesage & List)
+            vModel.WelcomeMessage = "These are all the Bugs and Tasks.";
+            vModel.WorkItemList = mList;
+
+            //pass along the VM to the view
+            return View(vModel);
         }
 
         public ActionResult About()
