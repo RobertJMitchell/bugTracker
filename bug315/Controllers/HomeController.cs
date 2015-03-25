@@ -1,4 +1,5 @@
-﻿using System;
+﻿using bug315.Models; // path to directory for WorkItem
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,6 +11,14 @@ namespace bug315.Controllers
     {
         public ActionResult Index()
         {
+            
+            List<WorkItem> mList = new List<WorkItem>() { 
+                new Bug(){Title="audio not working", Priority=1, DateCreated=DateTime.Now, StepsToReproduce="click the sound icon"},
+                new Bug(){Title="The dropdown is empty", Priority=3, DateCreated=DateTime.Now, StepsToReproduce="choose state, then city"},
+                new TaskToDo(){Title="Call client XYZ", Priority=3, DateCreated=DateTime.Now.AddDays(-5), Description="Follow up on deal XYZ"},
+                new TaskToDo(){Title="Purchase strong coffee", Priority=1, DateCreated=DateTime.Now.AddHours(-5), Description="Colombian Blend"},
+            };
+
             return View();
         }
 
