@@ -50,7 +50,7 @@ namespace bug315.Controllers
             //apply yo view model
             vModel.TaskList = listOfTask;
 
-            _service.Counter++;
+           
             vModel.Count = _service.Counter;
 
             //pass along the VM to the view

@@ -5,6 +5,7 @@ using System.Web;
 
 namespace bug315
 {
+    //Singleton...
     public class BugService
     {
         private static BugService _instance = null; // private variable that holds the BugService
@@ -21,7 +22,14 @@ namespace bug315
             }
         }
 
-        private int _counter = 0;
+        private int _counter;
+
+        //constructor
+        private BugService()
+        {
+            _counter = 10;
+        }
+
         public int Counter
         {
             get
@@ -32,6 +40,10 @@ namespace bug315
             {
                 _counter = value;
             }
+        }
+        public void Increment()
+        { 
+            _counter++
         }
 
         // - Hold List
