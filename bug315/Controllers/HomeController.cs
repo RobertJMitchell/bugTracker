@@ -25,6 +25,8 @@ namespace bug315.Controllers
             vModel.WelcomeMessage = "These are all the Bugs and Tasks.";
             vModel.WorkItemList = mList;
 
+            vModel.BugList = mList.Where(b => b.GetType().Name == "Bug").ToList();
+
             //pass along the VM to the view
             return View(vModel);
         }

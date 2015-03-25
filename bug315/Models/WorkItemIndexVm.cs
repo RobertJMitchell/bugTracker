@@ -12,5 +12,13 @@ namespace bug315.Models
         public string WelcomeMessage { get; set; }
         //used to hold the data
         public List<WorkItem> WorkItemList { get; set; }
+
+        // bug - typed cast
+
+        public List<WorkItem> BugList { get; set; }
+
+        //task - typed cast
+
+        public List<WorkItem> TaskList { get; set; }
     }
 }

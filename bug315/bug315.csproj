@@ -115,7 +115,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Bug.cs" />
+    <Compile Include="Models\TaskToDo.cs" />
     <Compile Include="Models\WorkItem.cs" />
+    <Compile Include="Models\WorkItemIndexVm.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
