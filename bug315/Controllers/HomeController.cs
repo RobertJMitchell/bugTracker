@@ -10,6 +10,12 @@ namespace bug315.Controllers
     public class HomeController : Controller
     {
         //init the Singleton / BugService
+        private BugService _service;
+
+        public HomeController() {
+          _service = new BugService();
+    }
+
 
         public ActionResult Index()
         {
@@ -44,12 +50,16 @@ namespace bug315.Controllers
             //apply yo view model
             vModel.TaskList = listOfTask;
 
+            _service.Counter++;
+            vModel.Count = _service.Counter;
+
             //pass along the VM to the view
             return View(vModel);
         }
 
         public ActionResult About()
         {
+            _service.Counter++;
             ViewBag.Message = "Your application description page.";
 
             return View();
@@ -57,6 +67,7 @@ namespace bug315.Controllers
 
         public ActionResult Contact()
         {
+            _service.Counter++;
             ViewBag.Message = "Your contact page.";
 
             return View();

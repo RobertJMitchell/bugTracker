@@ -20,5 +20,9 @@ namespace bug315.Models
         //task - typed cast
 
         public List<TaskToDo> TaskList { get; set; }
+
+        //show the counter
+
+        public int Count { get; set; }
     }
 }
