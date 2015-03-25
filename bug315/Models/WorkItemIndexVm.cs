@@ -3,26 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace bug315.Models
+namespace Bug315.Models
 {
-    //used to transport the data (properties seen below) to the view
+    //used to transport the data (the properties below) to the view
     public class WorkItemIndexVm
     {
-        //used for the header
+        // used for the header
         public string WelcomeMessage { get; set; }
-        //used to hold the data
+        // used to hold the data
         public List<WorkItem> WorkItemList { get; set; }
 
-        // bug - typed cast
-
+        // bug - typed cast 
         public List<Bug> BugList { get; set; }
-
-        //task - typed cast
-
+        // task - typed cast 
         public List<TaskToDo> TaskList { get; set; }
-
-        //show the counter
-
+        
+        // show the counter....
         public int Count { get; set; }
+
     }
 }

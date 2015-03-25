@@ -1,36 +1,26 @@
-﻿@model bug315.Models.WorkItemIndexVm
+﻿@model Bug315.Models.WorkItemIndexVm
 @{
     ViewBag.Title = "Home Page";
 }
 
 <div class="jumbotron">
-    <h1>@Model.Count @Model.WelcomeMessage</h1>
+    <h1>@Model.Count - @Model.WelcomeMessage</h1>
     <div>
-        <table>
+        <table class="table table-bordered">
             <thead>
                 <tr>
-                    <td>
-                        Task/Bug
-                    </td>
-                    <td>
-                        Priority
-                    </td>
-                    <td>
-                        Type
-                    </td>
-
-
+                    <td>Task/Bug</td>
+                    <td>Priority</td>
+                    <td>TYPE</td>
                 </tr>
             </thead>
-            @foreach (var bug in Model.WorkItemList)
+            @foreach (var buggy in Model.WorkItemList)
             {
                 <tr>
-                    <td>@bug.Title</td>
-                    <td>@bug.Priority</td>
-                    <td>@bug.GetType()</td>
-
+                    <td>@buggy.Title</td>
+                    <td>@buggy.Priority</td>
+                    <td>@buggy.GetType().Name</td>
                 </tr>
-
             }
         </table>
     </div>
@@ -39,23 +29,18 @@
 <div class="row">
     <div class="col-md-4">
         <h2>BUG</h2>
-        @foreach (var b in Model.BugList)
-        {
+        @foreach(var b in Model.BugList){
             <div>@b.Title <br /> @b.StepsToReproduce</div>
-            <hr />
+            <hr/>
         }
-       </div>
+    </div>
     <div class="col-md-4">
         <h2>Tasks</h2>
         @foreach (var b in Model.TaskList)
-        { 
-            <div>@b.Title <br /> @b.Description </div>
-            <hr />
+        {
+            <div>@b.Title <br /> @b.Description</div>
+            <hr/>
         }
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
+    
 </div>

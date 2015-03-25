@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
 
-namespace bug315
+namespace Bug315
 {
     public class RouteConfig
     {

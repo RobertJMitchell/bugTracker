@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace bug315.Models
+namespace Bug315.Models
 {
     public abstract class WorkItem
     {
-        //Title, DateCreated, and Priority 
+        //Title, DateCreated, and Priority (High, Medium, and Low).
         public string Title { get; set; }
         public DateTime DateCreated { get; set; }
-        //1, 2, and 3 are the priority integers
+        // Priority levels 1, 2 & 3
         public int Priority { get; set; }
+
     }
 }

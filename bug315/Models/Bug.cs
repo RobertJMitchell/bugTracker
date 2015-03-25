@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace bug315.Models
+namespace Bug315.Models
 {
-    public class Bug: WorkItem
+    public class Bug : WorkItem
     {
         public string StepsToReproduce { get; set; }
     }

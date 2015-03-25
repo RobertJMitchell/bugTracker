@@ -1,20 +1,29 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+VisualStudioVersion = 12.0.30723.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bug315", "bug315\bug315.csproj", "{C47D96B4-822A-4211-8E85-DCDAC7CE5C19}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bug315", "Bug315\Bug315.csproj", "{246C85A8-37D3-47AC-9509-3E0DF652C827}"
 EndProject
 Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs29
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Bug315\\Bug315.csproj
+		SccProjectName1 = Bug315
+		SccLocalPath1 = Bug315
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{C47D96B4-822A-4211-8E85-DCDAC7CE5C19}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C47D96B4-822A-4211-8E85-DCDAC7CE5C19}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C47D96B4-822A-4211-8E85-DCDAC7CE5C19}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C47D96B4-822A-4211-8E85-DCDAC7CE5C19}.Release|Any CPU.Build.0 = Release|Any CPU
+		{246C85A8-37D3-47AC-9509-3E0DF652C827}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{246C85A8-37D3-47AC-9509-3E0DF652C827}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{246C85A8-37D3-47AC-9509-3E0DF652C827}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{246C85A8-37D3-47AC-9509-3E0DF652C827}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,7 +1,7 @@
 ﻿using System.Web;
 using System.Web.Mvc;
 
-namespace bug315
+namespace Bug315
 {
     public class FilterConfig
     {
