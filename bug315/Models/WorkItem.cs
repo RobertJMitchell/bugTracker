@@ -7,6 +7,7 @@ namespace bug315.Models
 {
     public abstract class WorkItem
     {
+        //Title, DateCreated, and Priority 
         public string Title { get; set; }
         public DateTime DateCreated { get; set; }
         //1, 2, and 3 are the priority integers

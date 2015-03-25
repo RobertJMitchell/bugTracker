@@ -9,8 +9,12 @@ namespace bug315.Controllers
 {
     public class HomeController : Controller
     {
+        //init the Singleton / BugService
+
         public ActionResult Index()
         {
+            
+
             //create the VM for index
             WorkItemIndexVm vModel = new WorkItemIndexVm();
             //Create a list of objects (Bug, TaskToDo)
@@ -23,9 +27,22 @@ namespace bug315.Controllers
 
             //populate the VM (welcomeMesage & List)
             vModel.WelcomeMessage = "These are all the Bugs and Tasks.";
+            // list of bug and tasks
             vModel.WorkItemList = mList;
 
-            vModel.BugList = mList.Where(b => b.GetType().Name == "Bug").ToList();
+            //LINQ to filter only the BUG types
+            List<WorkItem> tempList = mList.Where(b => b.GetType().Name == "Bug").ToList();
+            // cast it to a List with type of BUG
+            List<Bug> listOfBug = tempList.Cast<Bug>().ToList();
+            // apply to viewmodel
+            vModel.BugList = listOfBug;
+            //linq to filter only task types
+            List<WorkItem> tempList2 = mList.Where(b => b.GetType().Name == "Task").ToList();
+
+            //cast it to a list with type of task
+            List<TaskToDo> listOfTask = tempList2.Cast<TaskToDo>().ToList();
+            //apply yo view model
+            vModel.TaskList = listOfTask;
 
             //pass along the VM to the view
             return View(vModel);

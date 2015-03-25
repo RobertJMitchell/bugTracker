@@ -15,10 +15,10 @@ namespace bug315.Models
 
         // bug - typed cast
 
-        public List<WorkItem> BugList { get; set; }
+        public List<Bug> BugList { get; set; }
 
         //task - typed cast
 
-        public List<WorkItem> TaskList { get; set; }
+        public List<TaskToDo> TaskList { get; set; }
     }
 }
